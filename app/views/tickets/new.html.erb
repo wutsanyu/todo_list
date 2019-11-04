@@ -1,0 +1,13 @@
+<h1>新增任務</h1>
+<%= simple_form_for @ticket do |f| %>
+  <%= f.input :ticket_name %>
+  <%= f.input :ticket_label %>
+  <%= f.input :ticket_status %>
+  <%= f.input :ticket_staring_time %>
+  <%= f.input :ticket_ending_time %>
+  <%= f.input :ticket_discription %>
+  <%= f.button :submit %>
+<% end %>
+
+<br />
+<%= link_to '回任務列表', tickets_path %>
