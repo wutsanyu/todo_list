@@ -1,0 +1,2 @@
+class KanbansController < ApplicationController
+end
