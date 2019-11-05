@@ -38,6 +38,6 @@ class KanbansController < ApplicationController
 
   private
   def kanban_params
-    params.require(:kanban).permit(:kanban_name, :kanban_status)
+    params.require(:kanban).permit(:kanban_title, :kanban_status)
   end
 end
