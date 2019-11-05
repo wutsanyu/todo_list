@@ -1,0 +1,22 @@
+<h1>看板列表</h1>
+
+<table>
+  <thead>
+    <tr>
+      <td>看板標題</td>
+      <td>看板狀態</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% kanban.each do |f| %>
+    <tr>
+      <td><%= kanban.kanban_name %></td>
+      <td><%= kanban.kanban_status%></td>
+      <td>
+        <%= link_to '編輯看板', edit_kanban_path(kanban) %>
+        <%= link_to '刪除看板', kanban_path(kanban), method: 'delete', data: { confirm: '確認刪除？' }%>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
